@@ -2,9 +2,9 @@ import Card from '../Card/Card';
 import { CardsContainer } from './styledComponents';
 //primero estaba asi: export default function Cards(props) {
    //const { characters } = props; pero aplicamos desestructuración
-export default function Cards({ characters }) {//es un array de arreglos que esta en data
+export default function Cards({ characters, onClose }) {//es un array de arreglos que esta en data
    //puede ser aqui la export default o ir abajo como export default Cards
-   const onClose = () => window.alert("Emulamos que se cierra la Card");
+   
    return (
    <CardsContainer>
       {
@@ -17,7 +17,7 @@ export default function Cards({ characters }) {//es un array de arreglos que est
             species={species}
             gender={gender}
             image={image}
-            onClose={() => window.alert('Emulamos que se cierra la card')} //esta funcion la copiamos de app.js
+            onClose={()=>onClose(id)} //esta funcion la copiamos de app.js
             />)
          })
       }
