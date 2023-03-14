@@ -5,6 +5,9 @@ import Cards from './components/Cards/Cards.jsx'
 //import characters from './data.js'   :no lo ocupamos aqui para esta tarea
 import Nav from "./components/Nav";
 import {useState} from 'react';
+import{Routes, Route} from 'react-router-dom';
+import Detail from "./components/Detail.jsx"; 
+import About from './components/About.jsx';
 import style from "./App.module.css"  //este lo creamos al modificar app.css por app.module.css
 //en el import de data desestructuramos para llamar a Rick que es objeto que no esta exportado por default
 //si quisieramos importar otro obj a rick le sumamos con una coma el name del objeto y en
@@ -63,13 +66,12 @@ function App () {
    
   </div>
       <Nav onSearch={onSearch}/>
-      <div>
-        <Cards
-        onClose={onClose}
-          characters={characters}
-        />
-      </div>
-      <hr />
+      <Routes>
+        <Route path= 'home' element={<Cards onClose={onClose} characters={characters}/>}/>
+        <Route path= 'about' element={<about/>} />
+        <Route path= 'detail/:detailId' element ={<Detail/>} />
+      </Routes>
+     
       
     </div>
   )

@@ -17,6 +17,7 @@ export default function Cards({ characters, onClose }) {//es un array de arreglo
             species={species}
             gender={gender}
             image={image}
+            id={id}
             onClose={()=>onClose(id)} //esta funcion la copiamos de app.js
             />)
          })
