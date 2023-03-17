@@ -1,18 +1,5 @@
-.searchInput{
-    border: 0px;
-    border-radius: 15px 0px 0px 15px;
-    background-color: #e0e0e0;
-    height: 3em;
-}
-
-.searchButton{
-    border: 0px;
-    border-radius: 0px 15px 15px 0px;
-    background-color: #e0e0e0;
-    height: 3em;
-}
-
-.bar{
-    width: 15%;
-    background-color: red;
-}
+.searchbar {
+    border: 1px solid #aee5e2;
+    padding: 1rem;
+    background-color: #151df1;
+  }  

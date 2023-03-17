@@ -5,6 +5,8 @@ const characters = [
     gender: 'Male',
     image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg'
   },
+
+
   {
     name: 'Morty Smith',
     species: 'Human',
@@ -26,7 +28,8 @@ const characters = [
 ]
 
 
-export default characters
+
+export default characters;
 //recordar que por archivo podemos tener un solo default
 //aqui por default se envia lo del array pero el objeto Rick queda fuera y se llama
 //desestructurando objeto llamamos a rick en app.js
